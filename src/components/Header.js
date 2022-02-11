@@ -1,7 +1,7 @@
 import React from "react";
 import Search from "./Search";
 
-function Header() {
+function Header( {onSearch}) {
   return (
     <header>
       <h1>
@@ -10,7 +10,8 @@ function Header() {
         </span>
         gregslist
       </h1>
-      <Search />
+      <Search onSearch={onSearch}/>
+      {/* prop sent from parent component. parent component will hold the state of the search so that it can be passed to another child component */}
     </header>
   );
 }
